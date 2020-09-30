@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/timerWidget.dart';
 
-void main() {
-  runApp(
-    Center(
-      child: Text(
-        'Hello Kartik Jabreba',
-        textAlign: TextAlign.center,
-        textDirection: TextDirection.ltr,
-        overflow: TextOverflow.ellipsis,
-        style: TextStyle(fontWeight: FontWeight.bold),
+void main() => runApp(MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Timer App'),
+        ),
+        body: TimerWidget(),
       ),
-    ),
-  );
-}
+    ));
