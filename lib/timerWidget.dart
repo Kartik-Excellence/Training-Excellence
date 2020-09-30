@@ -30,16 +30,14 @@ class _TimerWidgetState extends State<TimerWidget> {
     });
   }
 
-  void stopTimer() {
-    print("stop timer");
-    _timerObj.cancel();
+  void startTimer() {
+    if (_timerObj.isActive) {
+    } else
+      startTimeOut();
   }
 
-  void startTimer() {
-    print("start timer");
-    if (!_timerObj.isActive) {
-      startTimeOut();
-    }
+  void stopTimer() {
+    _timerObj.cancel();
   }
 
   @override
